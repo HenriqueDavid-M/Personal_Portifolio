@@ -64,8 +64,7 @@ async function obterInformacoesProjetos() {
 
     for (const repo of repos) {
       try {
-        // Obter o conteúdo do arquivo PP.txt
-        const ppFileUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/.gitignore`;
+        const ppFileUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/PP.txt`;
         const ppFileResponse = await fetch(ppFileUrl);
 
         let ppFileContent;
@@ -109,7 +108,7 @@ projectBox.addEventListener('click', () => {
           // Adicionar o projeto ao contêiner
           githubProjectsContainer.appendChild(projectBox);
         } else {
-          console.warn(`Conteúdo inválido no arquivo PP.txt do repositório ${repo.name}. Deve ser uma URL de imagem.`);
+          console.warn(`Conteúdo inválido no arquivo .gitignore do repositório ${repo.name}. Deve ser uma URL de imagem.`);
         }
       } catch (error) {
         console.error(`Erro ao processar o repositório ${repo.name}:`, error);
@@ -123,7 +122,7 @@ projectBox.addEventListener('click', () => {
 // Chamar a função para iniciar o processo
 obterInformacoesProjetos();
 
-function prepareAndSubmitForm() {
+function prepareAndSubmitForm() {}
   var form = document.getElementById('contactForm');
   var formData = new FormData(form);
 
@@ -144,4 +143,4 @@ function prepareAndSubmitForm() {
     var mailtoLink = 'mailto:seu@email.com?subject=' + encodeURIComponent(formData.get('Email Subject')) + '&body=' + encodeURIComponent(emailBody);
 
     window.open(mailtoLink, '_blank');
-}
+};
