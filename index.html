@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Henrique's Personal Portfolio</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!--body-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, It's me</h3>
+                <h1>Henrique</h1>
+                <h3>And I'm a <span class="multiple-text"></span></h3>
+                <div class="social-media">
+                    <a href="https://github.com/HenriqueDavid-M"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:henrique12870@gmail.com?subject=Budget for participation in a project&body=Hello Henrique, I am %27your name%27. I am getting in touch because I would like a quote for your participation in a project. This project is %27Describe the project%27. Aatt, %27name%27">
+                        <i class='bx bxs-envelope'></i></a>
+                    <a href="https://www.instagram.com/henrique_2639/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.linkedin.com/in/henrique-david-6a41b11bb/"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+                <a href="file:///C:/Users/Admin/Documents/Curriculos/TI.pdf" class="btn">Download CV</a>
+            </div>
+            <div class="home-img">
+                <img src="Design sem nome (1).png" alt="">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="https://avatars.githubusercontent.com/u/118631361?v=4" alt="">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About<span>Me</span></h2>
+                <h3>Fullstack Developer</h3>
+                <p>I'm a Fullstack Developer passionate about creating exceptional digital experiences. Throughout my journey, I have explored various technologies, becoming an agile problem solver and a valuable collaborator on different projects. My incessant search for knowledge and my dedication to constant practice enable me to face challenges with confidence and innovation.</p>
+                <p>Skilled experience in Javascript,HTML,CSS,PHP,BOOTSTRAP,Python,C#. </p>
+                 <a href="#services"class="btn">Read More</a>   
+            </div>
+        </section>
+
+        <section class="services"id="services">
+            <h2 class="heading">My<span>Services</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Web Development</h3>
+                    <p>Motivated designer and developer
+                         with experience creating custom websites through HTML and CSS. 
+                         Strong collaboration skills and proven history of application development. DHTML and JavaScript. MS Access and MySQL.</p>
+                    <a href="#portfolio"class="btn">Read More</a>
+                </div>
+        
+                <div class="services-box">
+                    <i class='bx bxl-python' ></i>
+                    <h3>Python Development</h3>
+                    <p>Passionate Python developer, committed to efficiency and innovation. Challenge solver with solid expertise.</p>
+                    <a href="#portfolio"class="btn">Read More</a>
+                </div>
+            
+                <div class="services-box">
+                    <i class='bx bx-code-alt' ></i>
+                    <h3>Fullstack Development</h3>
+                    <p>I'm Developer Fullstack with a great passion to my work. The main goal is to create modern, attractive and user-friendly interfaces and codes and find creative and simple solutions for your business.
+                        </p>
+                    <a href="#portfolio"class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Latest<span>Project</span></h2>
+            <div class="portfolio-container" id="github-projects-container">
+            <a href="#"><i class='bx bx-link-external' ></i></a>   <!-- Projetos do GitHub serão adicionados aqui automaticamente -->
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        </section>
+        
+        <section class="contact"id="contact">
+            <h2 class="heading">Contact<span>ME!</span></h2>
+
+            <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name">
+                    <input type="email" name="Email Address" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="tel" name="Mobile Number" placeholder="Mobile Number">
+                    <input type="text" name="Email Subject" placeholder="Email Subject">
+                </div>
+                <textarea name="Your Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="button" value="Send Message" class="btn" onclick="openEmailClient()">
+            </form>
+            <span id="msg"></span>
+            </section>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by Henrique | All Rights Reserved.</p>
+            </div>
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
