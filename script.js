@@ -118,29 +118,3 @@ projectBox.addEventListener('click', () => {
     console.error("Erro ao obter repositórios do GitHub:", error);
   }
 }
-
-// Chamar a função para iniciar o processo
-obterInformacoesProjetos();
-
-function prepareAndSubmitForm() {}
-  var form = document.getElementById('contactForm');
-  var formData = new FormData(form);
-
-  var emailBody = "";
-  formData.forEach(function(value, key){
-      emailBody += key + ": " + value + "\n";
-  });
-
-  function prepareAndOpenMailTo() {
-    var form = document.getElementById('contactForm');
-    var formData = new FormData(form);
-
-    var emailBody = "";
-    formData.forEach(function(value, key){
-        emailBody += key + ": " + value + "%0A";  // %0A é a codificação de nova linha para mailto
-    });
-
-    var mailtoLink = 'mailto:seu@email.com?subject=' + encodeURIComponent(formData.get('Email Subject')) + '&body=' + encodeURIComponent(emailBody);
-
-    window.open(mailtoLink, '_blank');
-};
