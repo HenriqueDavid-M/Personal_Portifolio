@@ -97,8 +97,7 @@ projectBox.innerHTML = `
       <h4>${repo.name}</h4>
       <p>${repo.description || 'Sem descrição disponível.'}</p>
       <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="project-link"><i class='bx bx-link-external'></i></a>
-  </div>
-`;
+  </div>`;
 
 // Adicionar evento de clique para redirecionar para o repositório
 projectBox.addEventListener('click', () => {
@@ -118,6 +117,8 @@ projectBox.addEventListener('click', () => {
     console.error("Erro ao obter repositórios do GitHub:", error);
   }
 };
+// Chamar a função para iniciar o processo
+obterInformacoesProjetos();
 
 function submitForm() {
   var formData = {
@@ -128,7 +129,7 @@ function submitForm() {
       Your_Message: document.getElementById("yourMessage").value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwIQ_9ImlSPv07v3YQwiFxgCSpam14qTSURYYOt0EdTxZ3B2SjcnwsLoge78GSJV8li/exec', {
+  fetch('URL_DO_SEU_GOOGLE_APPS_SCRIPT', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
