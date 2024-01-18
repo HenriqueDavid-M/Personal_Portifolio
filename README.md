@@ -25,7 +25,7 @@ Feel free to customize this code to your preferences. You can modify the design,
 
 ## Contributions
 
-If you find issues or improvements to suggest, please feel free to open an [issue](https://github.com/HenriqueDavid-M/Personal_Portifolio/issues) or send a [pull request](https: //github.com/HenriqueDavid-M/Personal_Portifolio/pulls).
+If you find issues or improvements to suggest, please feel free to open an [issue](https://github.com/HenriqueDavid-M/Personal_Portifolio/issues) or send a [pull request](https://github.com/HenriqueDavid-M/Personal_Portifolio/pulls).
 
 # Henrique David Melo da Silva - Site Pessoal
 
