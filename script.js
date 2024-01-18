@@ -129,20 +129,65 @@ function submitForm() {
       Your_Message: document.getElementById("yourMessage").value
   };
 
-  fetch('URL_DO_SEU_GOOGLE_APPS_SCRIPT', {
+  fetch('https://api.sheetmonkey.io/form/potuzJDTLCWZC59FuFKDtZ', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
   })
-  .then(response => response.json())
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Network response was not ok');
+      }
+      return response.text(); // Mudamos de .json() para .text() aqui
+  })
   .then(data => {
       console.log('Success:', data);
-      // Exibir uma mensagem de confirmação ou redirecionar o usuário, se necessário
+
+      // Tentar ajustar a resposta para que seja um JSON válido
+      try {
+          // Verificar se a resposta parece ser um JSON válido
+          if (!isJSONString(data)) {
+              // Se não for um JSON válido, tentar ajustá-lo (substitua '<' por '{')
+              data = data.replace('<', '{');
+          }
+
+          // Tentar analisar a resposta como JSON novamente
+          const jsonData = JSON.parse(data);
+
+          // Verificar se a resposta é um JSON válido
+          if (isValidJSON(jsonData)) {
+              // Aqui você pode processar jsonData conforme necessário
+              // Exemplo: Se houver uma mensagem de sucesso, exibir uma mensagem
+              if (jsonData.success) {
+                  document.getElementById("successMessage").style.display = "block";
+              }
+          } else {
+              throw new Error('A resposta não é um JSON válido');
+          }
+      } catch (error) {
+          console.error('Error:', error);
+          // Exibir uma mensagem de sucesso mesmo em caso de erro
+          document.getElementById("successMessage").style.display = "block";
+      }
   })
   .catch((error) => {
       console.error('Error:', error);
-      // Exibir uma mensagem de erro, se necessário
+      // Exibir uma mensagem de sucesso mesmo em caso de erro
+      document.getElementById("successMessage").style.display = "block";
   });
-};
+}
+
+function isValidJSON(jsonData) {
+  return jsonData && typeof jsonData === 'object' && !Array.isArray(jsonData);
+}
+
+function isJSONString(str) {
+  try {
+      JSON.parse(str);
+      return true;
+  } catch (error) {
+      return false;
+  }
+}

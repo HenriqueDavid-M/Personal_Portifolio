@@ -8,35 +8,25 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- Ícones padrão para navegadores -->
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons8-python-color-16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons8-python-color-32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons8-python-color-96.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons8-python-color-192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons8-python-color-512.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons8-python-color-16.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons8-python-color-32.ico">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons8-python-color-96.ico">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons8-python-color-192.ico">
+        <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons8-python-color-512.ico">
 
         <!-- Ícones Apple Touch -->
-        <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="/assets/icons8-python-color-57.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="/assets/icons8-python-color-60.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/assets/icons8-python-color-72.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/icons8-python-color-76.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/assets/icons8-python-color-114.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/icons8-python-color-120.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/assets/icons8-python-color-144.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/icons8-python-color-152.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/icons8-python-color-180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="/assets/icons8-python-color-57.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="/assets/icons8-python-color-60.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/assets/icons8-python-color-72.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/icons8-python-color-76.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/assets/icons8-python-color-114.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/icons8-python-color-120.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/assets/icons8-python-color-144.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/icons8-python-color-152.ico">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/icons8-python-color-180.ico">
 
         <!-- Máscara de ícone -->
         <link rel="mask-icon" href="/assets/icons8-python-color-48.svg" color="#26E07F">
-
-        <!-- Ícones para Microsoft -->
-        <meta name="msapplication-square70x70logo" content="/assets/icons8-python-color-70.png">
-        <meta name="msapplication-TileImage" content="/assets/icons8-python-color-144.png">
-        <meta name="msapplication-square150x150logo" content="/assets/icons8-python-color-150.png">
-        <meta name="msapplication-square310x310logo" content="/assets/icons8-python-color-310.png">
-        <meta name="msapplication-TileColor" content="#C0FFEE">
-
-        <!-- Nome da aplicação -->
-        <meta name="application-name" content="Beautiful application name">
     </head>
     <body>
         <!--body-->
@@ -128,14 +118,18 @@
             <form id="contactForm">
                 <div class="input-box">
                     <input type="text" name="Name" placeholder="Full Name">
-                    <input type="email" name="Email Address" placeholder="Email Address">
+                    <input type="email" name="Email_Address" placeholder="Email Address">
                 </div>
                 <div class="input-box">
-                    <input type="tel" name="Mobile Number" placeholder="Mobile Number">
-                    <input type="text" name="Email Subject" placeholder="Email Subject">
+                    <input type="tel" name="Mobile_Number" placeholder="Mobile Number">
+                    <input type="text" name="Email_Subject" placeholder="Email Subject">
                 </div>
-                <textarea name="Your Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="button" value="Send Message" class="btn" onclick="submitForm()"> </form>
+                <textarea name="Your_Message" id="yourMessage" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="button" value="Send Message" class="btn" onclick="submitForm()">
+                <div id="successMessage" style="display:none;">
+                    <p>Envio concluído com sucesso!</p>
+                </div>
+            </form>
         </section>
 
         <footer class="footer">
