@@ -51,7 +51,7 @@ const typed = new Typed('.multiple-text',{
     loop:false
 });
 
-//Puxa os repositorios para o site, "Necessita de adicionar link da imagem no .gitignore do repositório"
+
 const username = "HenriqueDavid-M";
 const apiUrl = `https://api.github.com/users/${username}/repos`;
 
