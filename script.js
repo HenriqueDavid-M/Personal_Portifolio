@@ -108,7 +108,7 @@ projectBox.addEventListener('click', () => {
           // Adicionar o projeto ao contêiner
           githubProjectsContainer.appendChild(projectBox);
         } else {
-          console.warn(`Conteúdo inválido no arquivo .gitignore do repositório ${repo.name}. Deve ser uma URL de imagem.`);
+          console.warn(`Conteúdo inválido no arquivo PP.txt do repositório ${repo.name}. Deve ser uma URL de imagem.`);
         }
       } catch (error) {
         console.error(`Erro ao processar o repositório ${repo.name}:`, error);
