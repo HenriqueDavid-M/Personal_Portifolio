@@ -117,4 +117,31 @@ projectBox.addEventListener('click', () => {
   } catch (error) {
     console.error("Erro ao obter repositórios do GitHub:", error);
   }
-}
+};
+
+function submitForm() {
+  var formData = {
+      Name: document.getElementsByName("Name")[0].value,
+      Email_Address: document.getElementsByName("Email_Address")[0].value,
+      Mobile_Number: document.getElementsByName("Mobile_Number")[0].value,
+      Email_Subject: document.getElementsByName("Email_Subject")[0].value,
+      Your_Message: document.getElementById("yourMessage").value
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbwIQ_9ImlSPv07v3YQwiFxgCSpam14qTSURYYOt0EdTxZ3B2SjcnwsLoge78GSJV8li/exec', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Success:', data);
+      // Exibir uma mensagem de confirmação ou redirecionar o usuário, se necessário
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+      // Exibir uma mensagem de erro, se necessário
+  });
+};
