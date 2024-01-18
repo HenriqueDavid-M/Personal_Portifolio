@@ -1,5 +1,7 @@
 # Henrique David Melo da Silva - Personal Website
 
+![Imagem descritiva do portifolio](assets/WhatsApp%20Image%202024-01-17%20at%2022.25.04.jpeg)
+
 Welcome to my personal website repository! This is the source code behind my website, where I share information about myself, my work and projects.
 
 ## Overview
